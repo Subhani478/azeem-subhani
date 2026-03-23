@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Azeem Subhani — Junior Software Engineer | Lahore, Pakistan</title>
+  <meta name="description" content="Azeem Subhani is a Junior Software Engineer specializing in Python, Django, and REST APIs. Based in Lahore, Punjab, Pakistan. Currently at Tylextech." />
+  <meta name="keywords" content="Junior Software Engineer, Python, Django, REST API, IoT, Lahore, Pakistan, Azeem Subhani, Tylextech" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.azeemsubhani.com" />
+  <meta property="og:title" content="Azeem Subhani — Junior Software Engineer" />
+  <meta property="og:description" content="Building scalable backend solutions with Python & Django. IoT background. Based in Pakistan." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:#0a0f0d;--bg2:#0e1511;--bg3:#111a14;--surface:#162019;--surface2:#1c2b20;
+      --border:#243029;--green:#22c55e;--green-dim:#16a34a;--green-glow:rgba(34,197,94,.15);
+      --green-subtle:rgba(34,197,94,.07);--text:#e8f0ea;--text2:#9db8a2;--text3:#5a7860;
+      --mono:'DM Mono',monospace;--serif:'DM Serif Display',serif;--sans:'Instrument Sans',sans-serif;
+      --transition: all 0.3s ease;
+    }
+    [data-theme="light"] {
+      --bg:#f8fafc;--bg2:#f1f5f9;--bg3:#e2e8f0;--surface:#ffffff;--surface2:#f8fafc;
+      --border:#cbd5e1;--green:#16a34a;--green-dim:#22c55e;--green-glow:rgba(34,197,94,.1);
+      --green-subtle:rgba(34,197,94,.05);--text:#0f172a;--text2:#334155;--text3:#64748b;
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden;transition:var(--transition)}
+    ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--green-dim);border-radius:2px}
+    ::selection{background:var(--green);color:var(--bg)}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:999;opacity:.4}
+    body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:64px 64px;opacity:.3;pointer-events:none;z-index:0}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 2.5rem;background:rgba(10,15,13,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:var(--transition)}
+    [data-theme="light"] nav{background:rgba(248,250,252,.95)}
+    .nav-logo{font-family:var(--mono);font-size:.9rem;color:var(--green);letter-spacing:.05em;text-decoration:none}
+    .nav-logo span{color:var(--text3)}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{font-family:var(--mono);font-size:.8rem;color:var(--text2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--green)}
+    .nav-cta{font-family:var(--mono);font-size:.8rem;color:var(--green);border:1px solid var(--green);padding:.45rem 1.1rem;border-radius:4px;text-decoration:none;transition:background .2s,color .2s;min-height:44px;display:inline-flex;align-items:center}
+    .nav-cta:hover{background:var(--green);color:var(--bg)}
+    .nav-right{display:flex;align-items:center;gap:1rem}
+    .theme-toggle{background:var(--surface);border:1px solid var(--border);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.2rem;transition:var(--transition);min-height:40px;min-width:40px}
+    .theme-toggle:hover{border-color:var(--green);transform:scale(1.05)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;min-height:44px;min-width:44px;align-items:center;justify-content:center}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--text);transition:all .3s}
+
+    /* HERO */
+    #home{position:relative;min-height:100vh;display:flex;align-items:center;padding:7rem 2.5rem 4rem;z-index:1}
+    .hero-inner{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 340px;gap:4rem;align-items:center}
+    .hero-badge{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.75rem;color:var(--green);background:var(--green-subtle);border:1px solid rgba(34,197,94,.2);padding:.3rem .8rem;border-radius:2rem;margin-bottom:1.5rem;letter-spacing:.06em}
+    .hero-badge::before{content:'';width:7px;height:7px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+    h1{font-family:var(--serif);font-size:clamp(3rem,6vw,5.5rem);line-height:1.05;margin-bottom:.5rem;letter-spacing:-.02em}
+    .hero-title-accent{color:var(--green);font-style:italic}
+    .hero-subtitle{font-family:var(--mono);font-size:1rem;color:var(--text2);margin-bottom:1.5rem;letter-spacing:.04em}
+    .hero-desc{font-size:1.05rem;color:var(--text2);max-width:520px;line-height:1.75;margin-bottom:2.5rem}
+    .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+    .btn-primary{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.85rem;background:var(--green);color:var(--bg);padding:.75rem 1.75rem;border-radius:4px;text-decoration:none;font-weight:500;letter-spacing:.04em;transition:all .2s;border:none;cursor:pointer;min-height:44px}
+    .btn-primary:hover{background:#16a34a;transform:translateY(-1px);box-shadow:0 8px 24px rgba(34,197,94,.25)}
+    .btn-secondary{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.85rem;color:var(--text);border:1px solid var(--border);padding:.75rem 1.75rem;border-radius:4px;text-decoration:none;letter-spacing:.04em;transition:all .2s;min-height:44px;background:transparent}
+    .btn-secondary:hover{border-color:var(--green);color:var(--green)}
+    .hero-stats{display:flex;gap:2.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .stat-num{font-family:var(--serif);font-size:2rem;color:var(--green);display:block;line-height:1}
+    .stat-label{font-family:var(--mono);font-size:.7rem;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-top:.25rem;display:block}
+
+    /* Hero card */
+    .hero-photo-wrap{position:relative}
+    .hero-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+    .hero-card-top{background:linear-gradient(135deg,var(--surface2),var(--bg3));padding:2rem 1.5rem;display:flex;flex-direction:column;align-items:center;gap:.85rem;border-bottom:1px solid var(--border)}
+    .avatar-circle{width:84px;height:84px;border-radius:50%;background:var(--green-subtle);border:2px solid rgba(34,197,94,.35);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:2rem;color:var(--green)}
+    .hero-card-name{font-family:var(--sans);font-size:1.05rem;font-weight:600;color:var(--text);text-align:center}
+    .hero-card-role{font-family:var(--mono);font-size:.72rem;color:var(--green);text-align:center;letter-spacing:.06em}
+    .hero-card-body{padding:1.25rem 1.5rem;display:flex;flex-direction:column;gap:.8rem}
+    .hero-card-row{display:flex;align-items:flex-start;gap:.75rem}
+    .hcr-icon{font-size:.95rem;margin-top:1px}
+    .hcr-text{font-family:var(--mono);font-size:.78rem;color:var(--text2)}
+    .hcr-text span{color:var(--text3);font-size:.68rem;display:block;margin-bottom:1px;text-transform:uppercase;letter-spacing:.08em}
+    .status-dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 2s infinite;flex-shrink:0;margin-top:4px}
+    .hero-dots{position:absolute;top:-10px;right:-10px;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;opacity:.35}
+    .hero-dots span{display:block;width:4px;height:4px;background:var(--green);border-radius:50%}
+
+    /* SECTIONS */
+    section{position:relative;z-index:1;padding:6rem 2.5rem}
+    .container{max-width:1200px;margin:0 auto;width:100%}
+    .section-label{font-family:var(--mono);font-size:.75rem;color:var(--green);text-transform:uppercase;letter-spacing:.2em;margin-bottom:.75rem;display:flex;align-items:center;gap:.75rem}
+    .section-label::after{content:'';flex:1;max-width:60px;height:1px;background:var(--green-dim)}
+    h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);line-height:1.15;margin-bottom:1rem;letter-spacing:-.01em}
+    .section-desc{font-size:1rem;color:var(--text2);max-width:540px;line-height:1.75;margin-bottom:3.5rem}
+
+    /* ABOUT */
+    #about{background:var(--bg2)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+    .about-text p{color:var(--text2);line-height:1.85;margin-bottom:1.25rem;font-size:1rem}
+    .about-text p strong{color:var(--text);font-weight:500}
+    .about-details{display:flex;flex-direction:column;gap:1rem}
+    .detail-row{display:flex;gap:1rem;align-items:flex-start;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:8px}
+    .detail-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .detail-info label{font-family:var(--mono);font-size:.7rem;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;display:block}
+    .detail-info span{font-size:.95rem;color:var(--text)}
+    .pill-group{display:flex;flex-wrap:wrap;gap:.5rem}
+    .pill{font-family:var(--mono);font-size:.78rem;color:var(--green);background:var(--green-subtle);border:1px solid rgba(34,197,94,.2);padding:.3rem .85rem;border-radius:2rem}
+    .interests{margin-top:2rem}
+    .interests-title{font-family:var(--mono);font-size:.75rem;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem}
+
+    /* SKILLS */
+    #skills{background:var(--bg)}
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
+    .skill-category{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem;transition:border-color .2s,box-shadow .2s}
+    .skill-category:hover{border-color:rgba(34,197,94,.3);box-shadow:0 0 0 1px rgba(34,197,94,.1),0 8px 32px rgba(0,0,0,.3)}
+    .skill-cat-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+    .skill-cat-icon{width:36px;height:36px;border-radius:8px;background:var(--green-subtle);border:1px solid rgba(34,197,94,.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+    .skill-cat-name{font-family:var(--sans);font-size:.95rem;font-weight:600;color:var(--text)}
+    .skill-list{display:flex;flex-direction:column;gap:.85rem}
+    .skill-item{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .skill-name{font-family:var(--mono);font-size:.8rem;color:var(--text2);min-width:110px}
+    .skill-bar-wrap{flex:1;height:4px;background:var(--bg);border-radius:2px;overflow:hidden}
+    .skill-bar{height:100%;background:linear-gradient(90deg,var(--green-dim),var(--green));border-radius:2px;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+    .skill-pct{font-family:var(--mono);font-size:.7rem;color:var(--text3);min-width:30px;text-align:right}
+
+    /* PROJECTS */
+    #projects{background:var(--bg2)}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.5rem}
+    .project-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s,border-color .2s}
+    .project-card:hover{transform:translateY(-4px);border-color:rgba(34,197,94,.3);box-shadow:0 16px 48px rgba(0,0,0,.4),0 0 0 1px rgba(34,197,94,.08)}
+    .project-header{padding:1.5rem 1.5rem 1rem;display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
+    .project-icon{width:44px;height:44px;border-radius:10px;background:var(--green-subtle);border:1px solid rgba(34,197,94,.2);display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+    .project-links{display:flex;gap:.5rem}
+    .project-link{width:32px;height:32px;border-radius:6px;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:.85rem;color:var(--text2);transition:border-color .2s,color .2s}
+    .project-link:hover{border-color:var(--green);color:var(--green)}
+    .project-body{padding:0 1.5rem 1.5rem;flex:1;display:flex;flex-direction:column}
+    .project-card h3{font-family:var(--sans);font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:.5rem}
+    .project-desc{font-size:.9rem;color:var(--text2);line-height:1.7;flex:1}
+    .project-tech{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.25rem}
+    .tech-tag{font-family:var(--mono);font-size:.72rem;color:var(--text3);background:var(--bg);border:1px solid var(--border);padding:.2rem .6rem;border-radius:3px}
+    .project-status{display:inline-flex;align-items:center;gap:.35rem;font-family:var(--mono);font-size:.7rem;color:var(--green);margin-top:1rem}
+    .project-status::before{content:'';width:5px;height:5px;background:var(--green);border-radius:50%}
+
+    /* EXPERIENCE */
+    #experience{background:var(--bg)}
+    .timeline{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+    .timeline-col h3{font-family:var(--mono);font-size:.75rem;color:var(--green);text-transform:uppercase;letter-spacing:.15em;margin-bottom:2rem;padding-bottom:.75rem;border-bottom:1px solid var(--border)}
+    .timeline-items{display:flex;flex-direction:column}
+    .timeline-item{position:relative;padding:0 0 2rem 1.75rem}
+    .timeline-item::before{content:'';position:absolute;left:0;top:8px;width:8px;height:8px;background:var(--green);border-radius:50%;box-shadow:0 0 0 3px var(--green-subtle)}
+    .timeline-item::after{content:'';position:absolute;left:3.5px;top:20px;bottom:0;width:1px;background:var(--border)}
+    .timeline-item:last-child::after{display:none}
+    .timeline-date{font-family:var(--mono);font-size:.72rem;color:var(--green);margin-bottom:.35rem;letter-spacing:.06em}
+    .timeline-title{font-family:var(--sans);font-size:1rem;font-weight:600;color:var(--text);margin-bottom:.2rem}
+    .timeline-org{font-size:.875rem;color:var(--text2);margin-bottom:.6rem}
+    .timeline-desc{font-size:.875rem;color:var(--text3);line-height:1.7}
+    .timeline-bullets{list-style:none;margin-top:.5rem;display:flex;flex-direction:column;gap:.35rem}
+    .timeline-bullets li{font-size:.85rem;color:var(--text3);line-height:1.6;padding-left:1rem;position:relative}
+    .timeline-bullets li::before{content:'›';position:absolute;left:0;color:var(--green)}
+    .current-badge{display:inline-flex;align-items:center;gap:.3rem;font-family:var(--mono);font-size:.68rem;background:var(--green-subtle);border:1px solid rgba(34,197,94,.25);color:var(--green);padding:.15rem .6rem;border-radius:2rem;margin-left:.5rem;vertical-align:middle}
+    .current-badge::before{content:'';width:5px;height:5px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+
+    /* CONTACT */
+    #contact{background:var(--bg2)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start}
+    .contact-info h3{font-family:var(--serif);font-size:1.75rem;margin-bottom:1rem}
+    .contact-info p{color:var(--text2);line-height:1.8;margin-bottom:2rem}
+    .contact-links{display:flex;flex-direction:column;gap:1rem}
+    .contact-link-item{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);transition:border-color .2s;min-height:44px}
+    .contact-link-item:hover{border-color:rgba(34,197,94,.3)}
+    .contact-link-icon{width:38px;height:38px;background:var(--green-subtle);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+    .contact-link-info label{font-family:var(--mono);font-size:.68rem;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;display:block}
+    .contact-link-info span{font-size:.9rem;color:var(--text)}
+    .contact-form{display:flex;flex-direction:column;gap:1.25rem}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .form-group{display:flex;flex-direction:column;gap:.4rem}
+    .form-group label{font-family:var(--mono);font-size:.72rem;color:var(--text3);text-transform:uppercase;letter-spacing:.1em}
+    .form-group input,.form-group textarea{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:.75rem 1rem;color:var(--text);font-family:var(--sans);font-size:.9rem;transition:border-color .2s;outline:none;resize:vertical}
+    .form-group input:focus,.form-group textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(34,197,94,.08)}
+    .form-group input::placeholder,.form-group textarea::placeholder{color:var(--text3)}
+    textarea{min-height:130px}
+    .form-note{font-family:var(--mono);font-size:.72rem;color:var(--text3)}
+    .form-success{display:none;padding:1rem 1.25rem;background:var(--green-subtle);border:1px solid rgba(34,197,94,.3);border-radius:8px;font-family:var(--mono);font-size:.85rem;color:var(--green);text-align:center}
+    .form-error{display:none;padding:1rem 1.25rem;background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.3);border-radius:8px;font-family:var(--mono);font-size:.85rem;color:#ef4444;text-align:center}
+    .btn-submit-loading{opacity:0.7;cursor:not-allowed}
+
+    /* FOOTER */
+    footer{position:relative;z-index:1;padding:2.5rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .footer-left{font-family:var(--mono);font-size:.8rem;color:var(--text3)}
+    .footer-left span{color:var(--green)}
+    .footer-socials{display:flex;gap:.75rem}
+    .footer-social{width:36px;height:36px;border-radius:6px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:.9rem;color:var(--text2);transition:border-color .2s,color .2s;min-height:44px;min-width:44px}
+    .footer-social:hover{border-color:var(--green);color:var(--green)}
+
+    /* ANIMATIONS */
+    .fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+    .fade-in.visible{opacity:1;transform:none}
+
+    /* MOBILE MENU */
+    .mobile-menu{display:none;position:fixed;inset:0;background:rgba(10,15,13,.97);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem}
+    [data-theme="light"] .mobile-menu{background:rgba(248,250,252,.98)}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{font-family:var(--serif);font-size:2rem;color:var(--text);text-decoration:none;transition:color .2s;padding:12px 24px}
+    .mobile-menu a:hover{color:var(--green)}
+    .mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--text2);font-size:1.5rem;cursor:pointer;min-height:44px;min-width:44px}
+
+    /* ACCESSIBILITY - FOCUS STYLES */
+    a:focus-visible, button:focus-visible, .btn-primary:focus-visible, .btn-secondary:focus-visible, .nav-cta:focus-visible, .contact-link-item:focus-visible, .footer-social:focus-visible {
+      outline: 2px solid var(--green);
+      outline-offset: 2px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .hero-inner{grid-template-columns:1fr}
+      .hero-photo-wrap{display:none}
+      .about-grid{grid-template-columns:1fr;gap:3rem}
+      .timeline{grid-template-columns:1fr;gap:2.5rem}
+      .contact-grid{grid-template-columns:1fr;gap:3rem}
+      .form-row{grid-template-columns:1fr}
+      .nav-links,.nav-cta{display:none}
+      .hamburger{display:flex}
+    }
+    @media(max-width:600px){
+      nav{padding:1rem 1.25rem}
+      section{padding:4rem 1.25rem}
+      #home{padding:6rem 1.25rem 3rem}
+      footer{padding:1.75rem 1.25rem}
+      .projects-grid{grid-template-columns:1fr}
+      .skills-grid{grid-template-columns:1fr}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Azeem Subhani",
+    "jobTitle": "Junior Software Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Tylextech"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lahore",
+      "addressRegion": "Punjab",
+      "addressCountry": "Pakistan"
+    },
+    "email": "azeem.subhani@tylextech.com",
+    "telephone": "03186595478",
+    "url": "https://www.azeemsubhani.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/azeem-subhani-66b0312a2/",
+      "https://github.com/azeemsubhani"
+    ],
+    "knowsAbout": ["Python", "Django", "REST API", "IoT", "PostgreSQL", "JavaScript"],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Superior University, Lahore"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav role="navigation" aria-label="Main navigation">
+  <a href="#home" class="nav-logo">azeem<span>.dev</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">🌙</button>
+    <a href="mailto:azeem.subhani@tylextech.com" class="nav-cta">Hire Me →</a>
+    <button class="hamburger" aria-label="Open menu" onclick="document.getElementById('mobileMenu').classList.add('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<nav id="mobileMenu" class="mobile-menu" aria-label="Mobile navigation">
+  <button class="mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')" aria-label="Close menu">✕</button>
+  <a href="#about" onclick="document.getElementById('mobileMenu').classList.remove('open')">About</a>
+  <a href="#skills" onclick="document.getElementById('mobileMenu').classList.remove('open')">Skills</a>
+  <a href="#projects" onclick="document.getElementById('mobileMenu').classList.remove('open')">Projects</a>
+  <a href="#experience" onclick="document.getElementById('mobileMenu').classList.remove('open')">Experience</a>
+  <a href="#contact" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section id="home" aria-label="Hero section">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">Open to new opportunities</div>
+      <h1>Azeem<br><span class="hero-title-accent">Subhani.</span></h1>
+      <p class="hero-subtitle">// Junior Software Engineer · Lahore, Pakistan</p>
+      <p class="hero-desc">
+        Entry-level Software Engineer with an IoT background and a growing focus on backend development. Building scalable web applications and REST APIs with <strong style="color:var(--text)">Python &amp; Django</strong> at Tylextech. Currently pursuing a <strong style="color:var(--text)">BS IoT</strong> at Superior University.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View My Work →</a>
+        <a href="#contact" class="btn-secondary">Get In Touch</a>
+        <a href="#" id="resumeDownloadBtn" class="btn-secondary">📄 Download Resume →</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <span class="stat-num">1+</span>
+          <span class="stat-label">Yr Experience</span>
+        </div>
+        <div>
+          <span class="stat-num">BS IoT</span>
+          <span class="stat-label">In Progress</span>
+        </div>
+        <div>
+          <span class="stat-num">2024</span>
+          <span class="stat-label">IoT Internship</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-card">
+        <div class="hero-card-top">
+          <div class="avatar-circle">AS</div>
+          <div class="hero-card-name">Azeem Subhani</div>
+          <div class="hero-card-role">Junior Software Engineer</div>
+        </div>
+        <div class="hero-card-body">
+          <div class="hero-card-row">
+            <div class="status-dot"></div>
+            <div class="hcr-text">
+              <span>Current Role</span>
+              Tylextech · Associate SWE
+            </div>
+          </div>
+          <div class="hero-card-row">
+            <div class="hcr-icon">🎓</div>
+            <div class="hcr-text">
+              <span>University</span>
+              Superior University, Lahore
+            </div>
+          </div>
+          <div class="hero-card-row">
+            <div class="hcr-icon">📍</div>
+            <div class="hcr-text">
+              <span>Location</span>
+              Lahore, Punjab, Pakistan
+            </div>
+          </div>
+          <div class="hero-card-row">
+            <div class="hcr-icon">📞</div>
+            <div class="hcr-text">
+              <span>Phone</span>
+              03186595478
+            </div>
+          </div>
+          <div class="hero-card-row">
+            <div class="hcr-icon">✉️</div>
+            <div class="hcr-text">
+              <span>Email</span>
+              azeem.subhani@tylextech.com
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-dots">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" aria-label="About me">
+  <div class="container">
+    <div class="section-label">01. About</div>
+    <h2>Who I Am</h2>
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <p>I'm <strong>Azeem Subhani</strong>, a Junior Software Engineer based in <strong>Lahore, Punjab, Pakistan</strong>. I currently work as an Associate Software Engineer at <strong>Tylextech</strong>, where I focus on building and maintaining backend web applications using Python and Django.</p>
+        <p>My background blends <strong>IoT fundamentals</strong> with a growing passion for <strong>backend systems and API development</strong>. After completing an IoT internship in 2024 — gaining hands-on experience with hardware-software integration and device communication — I shifted my focus toward developing scalable, data-driven server-side solutions.</p>
+        <p>I'm currently pursuing a <strong>BS in Internet of Things</strong> at Superior University, Lahore (2023–2027). I'm eager to deepen my expertise in backend architecture, REST API design, and collaborative software development.</p>
+        <div class="interests">
+          <div class="interests-title">// soft skills</div>
+          <div class="pill-group">
+            <span class="pill">Team Collaboration</span>
+            <span class="pill">Communication</span>
+            <span class="pill">Analytical Thinking</span>
+            <span class="pill">Time Management</span>
+            <span class="pill">Eagerness to Learn</span>
+          </div>
+        </div>
+      </div>
+      <div class="fade-in">
+        <div class="about-details">
+          <div class="detail-row">
+            <div class="detail-icon">👤</div>
+            <div class="detail-info"><label>Full Name</label><span>Azeem Subhani</span></div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-icon">💼</div>
+            <div class="detail-info"><label>Current Role</label><span>Associate SWE @ Tylextech</span></div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-icon">📍</div>
+            <div class="detail-info"><label>Location</label><span>Lahore, Punjab, Pakistan</span></div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-icon">📞</div>
+            <div class="detail-info"><label>Phone</label><span>03186595478</span></div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-icon">✉️</div>
+            <div class="detail-info"><label>Email</label><span>azeem.subhani@tylextech.com</span></div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-icon">🌐</div>
+            <div class="detail-info"><label>Languages</label><span>Urdu · English · Punjabi</span></div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-icon">✅</div>
+            <div class="detail-info"><label>Availability</label><span>Open to new opportunities</span></div>
+          </div>
+        </div>
+        <a href="mailto:azeem.subhani@tylextech.com" class="btn-primary" style="margin-top:1.5rem;display:inline-flex">Email Me →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" aria-label="Skills">
+  <div class="container">
+    <div class="section-label">02. Skills</div>
+    <h2>Tech Stack</h2>
+    <p class="section-desc">Languages, frameworks, tools, and domains I work with every day.</p>
+    <div class="skills-grid">
+
+      <div class="skill-category fade-in">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">🖥️</div>
+          <div class="skill-cat-name">Languages</div>
+        </div>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-name">Python</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div><span class="skill-pct">85%</span></div>
+          <div class="skill-item"><span class="skill-name">JavaScript</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="60"></div></div><span class="skill-pct">60%</span></div>
+          <div class="skill-item"><span class="skill-name">HTML / CSS</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="65"></div></div><span class="skill-pct">65%</span></div>
+          <div class="skill-item"><span class="skill-name">SQL</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="62"></div></div><span class="skill-pct">62%</span></div>
+        </div>
+      </div>
+
+      <div class="skill-category fade-in">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">⚙️</div>
+          <div class="skill-cat-name">Frameworks & APIs</div>
+        </div>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-name">Django</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div><span class="skill-pct">80%</span></div>
+          <div class="skill-item"><span class="skill-name">Django REST</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="78"></div></div><span class="skill-pct">78%</span></div>
+          <div class="skill-item"><span class="skill-name">REST API Design</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="74"></div></div><span class="skill-pct">74%</span></div>
+          <div class="skill-item"><span class="skill-name">API Integration</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="70"></div></div><span class="skill-pct">70%</span></div>
+        </div>
+      </div>
+
+      <div class="skill-category fade-in">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">🗄️</div>
+          <div class="skill-cat-name">Databases</div>
+        </div>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-name">PostgreSQL</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="58"></div></div><span class="skill-pct">58%</span></div>
+          <div class="skill-item"><span class="skill-name">SQL (General)</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="62"></div></div><span class="skill-pct">62%</span></div>
+        </div>
+      </div>
+
+      <div class="skill-category fade-in">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">📡</div>
+          <div class="skill-cat-name">IoT & Tools</div>
+        </div>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-name">IoT Basics</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="70"></div></div><span class="skill-pct">70%</span></div>
+          <div class="skill-item"><span class="skill-name">Device Comms</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="60"></div></div><span class="skill-pct">60%</span></div>
+          <div class="skill-item"><span class="skill-name">Git</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="75"></div></div><span class="skill-pct">75%</span></div>
+          <div class="skill-item"><span class="skill-name">VS Code</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div><span class="skill-pct">90%</span></div>
+        </div>
+      </div>
+
+    </div>
+    <div style="margin-top:2.5rem">
+      <div class="section-label" style="margin-bottom:1rem">Professional Skills</div>
+      <div class="pill-group">
+        <span class="pill">Requirement Analysis</span>
+        <span class="pill">API Development</span>
+        <span class="pill">Problem Solving</span>
+        <span class="pill">Agile / Scrum</span>
+        <span class="pill">Documentation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" aria-label="Projects">
+  <div class="container">
+    <div class="section-label">03. Projects</div>
+    <h2>Selected Work</h2>
+    <p class="section-desc">Backend projects built with Python, Django, and REST APIs. Update GitHub &amp; live links when ready.</p>
+    <div class="projects-grid">
+
+      <article class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-icon">🌐</div>
+          <div class="project-links">
+            <a href="https://github.com/azeemsubhani" class="project-link" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">⌥</a>
+            <a href="#" class="project-link" aria-label="Live demo" title="Live">↗</a>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3>Django Web Application</h3>
+          <p class="project-desc">A full-featured web application built at Tylextech. Includes user authentication, CRUD data management, and a clean Django admin interface for managing application state.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span><span class="tech-tag">Django</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">HTML/CSS</span>
+          </div>
+          <span class="project-status">Professional Project · Tylextech</span>
+        </div>
+      </article>
+
+      <article class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-icon">🔌</div>
+          <div class="project-links">
+            <a href="https://github.com/azeemsubhani" class="project-link" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">⌥</a>
+            <a href="#" class="project-link" aria-label="Live demo" title="Live">↗</a>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3>RESTful API Service</h3>
+          <p class="project-desc">Designed and built a RESTful API using Django REST Framework supporting a frontend application. Handles authentication, serialization, CRUD operations, and clean endpoint documentation.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span><span class="tech-tag">Django REST</span><span class="tech-tag">DRF</span><span class="tech-tag">SQL</span>
+          </div>
+          <span class="project-status">Professional Project · Tylextech</span>
+        </div>
+      </article>
+
+      <article class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-icon">📡</div>
+          <div class="project-links">
+            <a href="https://github.com/azeemsubhani" class="project-link" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">⌥</a>
+            <a href="#" class="project-link" aria-label="Live demo" title="Live">↗</a>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3>IoT Data Collection System</h3>
+          <p class="project-desc">Built during my IoT internship — a data collection and logging system for IoT sensors. Focused on hardware-software integration, device communication protocols, and reliable data capture.</p>
+          <div class="project-tech">
+            <span class="tech-tag">IoT</span><span class="tech-tag">Python</span><span class="tech-tag">Device Comm</span><span class="tech-tag">Data Logging</span>
+          </div>
+          <span class="project-status">Internship Project · 2024</span>
+        </div>
+      </article>
+
+      <article class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-icon">🔗</div>
+          <div class="project-links">
+            <a href="https://github.com/azeemsubhani" class="project-link" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">⌥</a>
+            <a href="#" class="project-link" aria-label="Live demo" title="Live">↗</a>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3>Third-Party API Integration</h3>
+          <p class="project-desc">Integrated external RESTful APIs into existing Django web applications, implementing error handling, response parsing, and clean documentation for the engineering team.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span><span class="tech-tag">Django</span><span class="tech-tag">REST APIs</span><span class="tech-tag">Git</span>
+          </div>
+          <span class="project-status">Professional Project · Tylextech</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" aria-label="Experience and Education">
+  <div class="container">
+    <div class="section-label">04. Experience</div>
+    <h2>My Journey</h2>
+    <p class="section-desc">Professional experience and academic background, straight from my CV.</p>
+    <div class="timeline">
+
+      <div class="timeline-col">
+        <h3>// Work Experience</h3>
+        <div class="timeline-items">
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-date">Oct 2024 – Present <span class="current-badge">Current</span></div>
+            <div class="timeline-title">Associate Software Engineer</div>
+            <div class="timeline-org">Tylextech</div>
+            <ul class="timeline-bullets">
+              <li>Entry-level backend role focused on Python and Django web development.</li>
+              <li>Building and maintaining production web applications and features.</li>
+              <li>Developing and integrating RESTful APIs to support application functionality.</li>
+              <li>Collaborating with senior engineers to adopt best practices in software development.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-title">Entry-Level IoT Intern</div>
+            <div class="timeline-org">IoT Internship Programme</div>
+            <ul class="timeline-bullets">
+              <li>Completed foundational internship covering IoT concepts and hardware-software integration.</li>
+              <li>Gained practical exposure to IoT device communication and data collection fundamentals.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="timeline-col">
+        <h3>// Education</h3>
+        <div class="timeline-items">
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-date">2023 – 2027 <span class="current-badge">In Progress</span></div>
+            <div class="timeline-title">BS Internet of Things (BS IoT)</div>
+            <div class="timeline-org">Superior University, Lahore</div>
+            <div class="timeline-desc">Pursuing a Bachelor's degree in IoT — covering embedded systems, device communication, networking, software engineering, and data-driven application development for connected systems.</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-label="Contact">
+  <div class="container">
+    <div class="section-label">05. Contact</div>
+    <h2>Let's Connect</h2>
+    <div class="contact-grid">
+
+      <div class="contact-info fade-in">
+        <h3>Got a project or opportunity?</h3>
+        <p>I'm open to freelance projects, internships, junior roles, and interesting collaborations. Send me a message and I'll respond as soon as possible.</p>
+        <div class="contact-links">
+          <a href="mailto:azeem.subhani@tylextech.com" class="contact-link-item">
+            <div class="contact-link-icon">✉️</div>
+            <div class="contact-link-info"><label>Email</label><span>azeem.subhani@tylextech.com</span></div>
+          </a>
+          <a href="tel:03186595478" class="contact-link-item">
+            <div class="contact-link-icon">📞</div>
+            <div class="contact-link-info"><label>Phone</label><span>03186595478</span></div>
+          </a>
+          <a href="https://www.linkedin.com/in/azeem-subhani-66b0312a2/" target="_blank" rel="noopener" class="contact-link-item">
+            <div class="contact-link-icon">💼</div>
+            <div class="contact-link-info"><label>LinkedIn</label><span>Linkedin</span></div>
+          </a>
+          <a href="https://github.com/azeemsubhani" target="_blank" rel="noopener" class="contact-link-item">
+            <div class="contact-link-icon">🐙</div>
+            <div class="contact-link-info"><label>GitHub</label><span>GitHub</span></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="fade-in">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name *</label>
+              <input type="text" id="fname" name="firstName" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastName" placeholder="Doe" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Job offer / Project / Collaboration" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project or opportunity…" required></textarea>
+          </div>
+          <div class="form-note">* Required fields. I typically respond within 24 hours.</div>
+          <button type="submit" class="btn-primary" id="formSubmitBtn">Send Message →</button>
+          <div class="form-success" id="formSuccess">✅ Message sent! I'll get back to you soon.</div>
+          <div class="form-error" id="formError">❌ Failed to send message. Please email me directly at azeem.subhani@tylextech.com</div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-left">© 2025 <span>Azeem Subhani</span>. Junior Software Engineer · Lahore, Pakistan.</div>
+  <div class="footer-socials">
+    <a href="https://github.com/azeemsubhani" target="_blank" rel="noopener" class="footer-social" aria-label="GitHub">🐙</a>
+    <a href="https://www.linkedin.com/in/azeem-subhani-66b0312a2/" target="_blank" rel="noopener" class="footer-social" aria-label="LinkedIn">💼</a>
+    <a href="mailto:azeem.subhani@tylextech.com" class="footer-social" aria-label="Email">✉️</a>
+  </div>
+</footer>
+
+<script>
+  // Dark/Light Mode Toggle
+  const themeToggle = document.getElementById('themeToggle');
+  const htmlElement = document.documentElement;
+  
+  // Check for saved theme preference
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    htmlElement.setAttribute('data-theme', savedTheme);
+    themeToggle.textContent = savedTheme === 'light' ? '☀️' : '🌙';
+  }
+  
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = htmlElement.getAttribute('data-theme');
+    if (currentTheme === 'light') {
+      htmlElement.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'dark');
+      themeToggle.textContent = '🌙';
+    } else {
+      htmlElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+      themeToggle.textContent = '☀️';
+    }
+  });
+
+  // Resume Download Button - Generate and Download Resume
+  const resumeBtn = document.getElementById('resumeDownloadBtn');
+  resumeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    // Create resume content
+    const resumeContent = `
+      AZEEM SUBHANI
+      =============
+      Junior Software Engineer
+      Lahore, Punjab, Pakistan
+      📞 03186595478
+      ✉️ azeem.subhani@tylextech.com
+      
+      PROFESSIONAL SUMMARY
+      --------------------
+      Entry-level Software Engineer with IoT background and growing focus on backend development.
+      Building scalable web applications and REST APIs with Python & Django at Tylextech.
+      
+      WORK EXPERIENCE
+      ----------------
+      Associate Software Engineer | Tylextech
+      Oct 2024 – Present
+      • Entry-level backend role focused on Python and Django web development
+      • Building and maintaining production web applications and features
+      • Developing and integrating RESTful APIs to support application functionality
+      • Collaborating with senior engineers to adopt best practices
+      
+      Entry-Level IoT Intern | IoT Internship Programme
+      2024
+      • Completed foundational internship covering IoT concepts and hardware-software integration
+      • Gained practical exposure to IoT device communication and data collection fundamentals
+      
+      EDUCATION
+      ---------
+      BS Internet of Things (BS IoT)
+      Superior University, Lahore | 2023 – 2027 (In Progress)
+      
+      SKILLS
+      ------
+      • Python, Django, Django REST Framework
+      • REST API Design & Integration
+      • PostgreSQL, SQL
+      • IoT Basics, Device Communication
+      • Git, VS Code
+      • Team Collaboration, Problem Solving, Agile/Scrum
+      
+      PROJECTS
+      --------
+      • Django Web Application - Full-featured web app with user authentication and CRUD operations
+      • RESTful API Service - Built using DRF with authentication and serialization
+      • IoT Data Collection System - Hardware-software integration for sensor data logging
+      • Third-Party API Integration - Integrated external APIs into Django applications
+    `;
+    
+    // Create blob and download
+    const blob = new Blob([resumeContent], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Azeem_Subhani_Resume.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
+
+  // Form Handling with Formspree
+  const contactForm = document.getElementById('contactForm');
+  const formSuccess = document.getElementById('formSuccess');
+  const formError = document.getElementById('formError');
+  const formSubmitBtn = document.getElementById('formSubmitBtn');
+  
+  // IMPORTANT: Replace this with your actual Formspree endpoint
+  // Sign up at https://formspree.io/ to get your free endpoint
+  const formspreeEndpoint = 'https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT';
+  
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Hide previous messages
+    formSuccess.style.display = 'none';
+    formError.style.display = 'none';
+    
+    // Validate form
+    const firstName = document.getElementById('fname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    
+    if (!firstName || !email || !message) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    
+    // Show loading state
+    const originalBtnText = formSubmitBtn.textContent;
+    formSubmitBtn.textContent = 'Sending...';
+    formSubmitBtn.disabled = true;
+    formSubmitBtn.classList.add('btn-submit-loading');
+    
+    try {
+      const formData = new FormData(contactForm);
+      
+      // If you have a Formspree endpoint, uncomment this section
+      /*
+      const response = await fetch(formspreeEndpoint, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        formSuccess.style.display = 'block';
+        contactForm.reset();
+        setTimeout(() => {
+          formSuccess.style.display = 'none';
+        }, 5000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+      */
+      
+      // For demo purposes, show success message (remove this when using actual Formspree)
+      // This is a simulation - replace with the actual fetch code above when you have your endpoint
+      setTimeout(() => {
+        formSuccess.style.display = 'block';
+        contactForm.reset();
+        setTimeout(() => {
+          formSuccess.style.display = 'none';
+        }, 5000);
+      }, 1000);
+      
+    } catch (error) {
+      formError.style.display = 'block';
+      setTimeout(() => {
+        formError.style.display = 'none';
+      }, 5000);
+    } finally {
+      // Reset button state
+      formSubmitBtn.textContent = originalBtnText;
+      formSubmitBtn.disabled = false;
+      formSubmitBtn.classList.remove('btn-submit-loading');
+    }
+  });
+
+  // Intersection Observer for animations
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e,i) => {
+      if(e.isIntersecting){ e.target.style.transitionDelay=(i*.08)+'s'; e.target.classList.add('visible'); }
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+
+  const skillObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){ e.target.querySelectorAll('.skill-bar').forEach(b=>{ b.style.width=b.dataset.width+'%'; }); }
+    });
+  },{threshold:.3});
+  document.querySelectorAll('.skill-category').forEach(el=>skillObs.observe(el));
+
+  const secs=document.querySelectorAll('section[id]');
+  const navLinks=document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll',()=>{
+    let cur='';
+    secs.forEach(s=>{if(window.scrollY>=s.offsetTop-120)cur=s.id;});
+    navLinks.forEach(l=>{l.style.color=l.getAttribute('href')==='#'+cur?'var(--green)':'';});
+  });
+</script>
+</body>
+</html>
